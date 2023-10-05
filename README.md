@@ -1,6 +1,10 @@
 # Firelit
 ### 🔥👑 FireLit: Streamlit App with Firebase Authentication
 
+<p align="center">
+  <img src="https://github.com/GitMarco27/firelit/blob/main/resources/firelit_logo.png" alt="Firelit Logo"/>
+</p>
+
 ### Installation
 You can install Firelit as a pip package.
 
