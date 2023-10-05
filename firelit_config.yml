@@ -1,0 +1,8 @@
+apiKey: AIzaSyCUgomafGXWTiIPDwashLCJDQEpq9qlIwA
+authDomain: pyrebase4test.firebaseapp.com
+projectId: pyrebase4test
+databaseURL: https://pyrebase4test-default-rtdb.europe-west1.firebasedatabase.app/
+storageBucket: pyrebase4test.appspot.com
+messagingSenderId: '809540617258'
+appId: 1:809540617258:web:f8f4372652b6e1503baf53
+measurementId: G-Z64D1DBH4T
