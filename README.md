@@ -1,4 +1,8 @@
 # Firelit
+
+[![code-check](https://github.com/GitMarco27/firelit/actions/workflows/code-check.yml/badge.svg)](https://github.com/GitMarco27/firelit/actions/workflows/code-check.yml)
+
+
 ### 🔥👑 FireLit: Streamlit App with Firebase Authentication
 
 <p align="center">
