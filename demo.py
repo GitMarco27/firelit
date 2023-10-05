@@ -1,5 +1,8 @@
+import os
+
 import plotly.graph_objects as go
 import streamlit as st
+from PIL import Image
 
 from firelit.frontend import firelit_login_form
 
@@ -9,6 +12,11 @@ if __name__ == "__main__":
         page_icon="🔥",
         layout="wide",
     )
+
+    with st.sidebar:
+        image = Image.open(os.path.join("resources", "firelit_logo.png"))
+        c1, c2, c3 = st.columns([1, 1, 1])
+        c2.image(image, width=100)
 
     st.title("🔥 Firelit Demo App")
     st.subheader("This is a demo app for the Firelit package")
