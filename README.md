@@ -1,7 +1,7 @@
 # Firelit
 
 [![code-check](https://github.com/GitMarco27/firelit/actions/workflows/code-check.yml/badge.svg)](https://github.com/GitMarco27/firelit/actions/workflows/code-check.yml)
-
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://firelit.streamlit.app/)
 
 ### 🔥👑 FireLit: Streamlit App with Firebase Authentication
 
