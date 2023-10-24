@@ -11,7 +11,7 @@ def firelit_login_form(
     admin: FirebaseAdmin | None = None,
     email: str = "",
     password: str = "",
-) -> Tuple[FirebaseAdmin, str, str]:
+) -> FirebaseAdmin:
     if sidebar:
         with st.sidebar:
             return firelit_login_form(firelit_config=firelit_config, sidebar=False)
@@ -54,4 +54,4 @@ def firelit_login_form(
                 admin.reset_connection()
                 st.rerun()
 
-    return admin, email, password
+    return admin

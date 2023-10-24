@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "firelit"
-version = "0.1.3"
+version = "0.1.5"
 description = "🔥👑 FireLit: Streamlit App with Firebase Authentication"
 authors = ["GitMarco27 <marco.sanguineti.info@gmail.com>"]
 license = "MIT"

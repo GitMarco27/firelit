@@ -22,7 +22,7 @@ if __name__ == "__main__":
     st.subheader("This is a demo app for the Firelit package")
     sidebar = st.toggle("Show login form in the sidebar", key="sidebar_login")
 
-    admin, _, _ = firelit_login_form(sidebar=sidebar)
+    admin = firelit_login_form(sidebar=sidebar)
 
     if not admin.authentication_status:
         st.write("Please login to continue")
