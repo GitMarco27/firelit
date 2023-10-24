@@ -4,17 +4,20 @@ from firelit.admin import FirebaseAdmin
 
 
 def firelit_login_form(
-    firelit_config: str | dict | None = None, sidebar: bool = False
+    firelit_config: str | dict | None = None,
+    sidebar: bool = False,
+    admin: FirebaseAdmin | None = None,
 ) -> FirebaseAdmin:
     if sidebar:
         with st.sidebar:
             return firelit_login_form(firelit_config=firelit_config, sidebar=False)
 
-    if "firelit_admin" not in st.session_state:
-        admin = FirebaseAdmin(config=firelit_config)
-        st.session_state["firelit_admin"] = admin
-    else:
-        admin = st.session_state["firelit_admin"]
+    if admin is None:
+        if "firelit_admin" not in st.session_state:
+            admin = FirebaseAdmin(config=firelit_config)
+            st.session_state["firelit_admin"] = admin
+        else:
+            admin = st.session_state["firelit_admin"]
 
     if not admin.authentication_status:
         with st.form("**Login**"):
