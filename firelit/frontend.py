@@ -1,3 +1,5 @@
+from typing import Tuple
+
 import streamlit as st
 
 from firelit.admin import FirebaseAdmin
@@ -7,7 +9,9 @@ def firelit_login_form(
     firelit_config: str | dict | None = None,
     sidebar: bool = False,
     admin: FirebaseAdmin | None = None,
-) -> FirebaseAdmin:
+    email: str = "",
+    password: str = "",
+) -> Tuple[FirebaseAdmin, str, str]:
     if sidebar:
         with st.sidebar:
             return firelit_login_form(firelit_config=firelit_config, sidebar=False)
@@ -22,8 +26,8 @@ def firelit_login_form(
     if not admin.authentication_status:
         with st.form("**Login**"):
             st.subheader("Login")
-            email = st.text_input("Email")
-            password = st.text_input("Password", type="password")
+            email = st.text_input("Email", value=email)
+            password = st.text_input("Password", type="password", value=password)
 
             if st.form_submit_button(
                 "🔐 Login", type="primary", use_container_width=True
@@ -50,4 +54,4 @@ def firelit_login_form(
                 admin.reset_connection()
                 st.rerun()
 
-    return admin
+    return admin, email, password
